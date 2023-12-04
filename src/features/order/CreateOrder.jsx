@@ -93,8 +93,6 @@ export async function action({ request }) {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
 
-  console.log(data.cart);
-
   const order = {
     ...data,
     cart: JSON.parse(data.cart),
